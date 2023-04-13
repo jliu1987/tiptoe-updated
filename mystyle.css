@@ -1,0 +1,237 @@
+
+        * {
+  box-sizing: border-box;
+}
+body {
+  background-color: #C3D5D2;
+  font-family: sans-serif,monospace,fantasy;
+  padding: 1% 5%;
+}
+
+
+header{
+    background-color: #2B4040;
+}
+footer{
+    background-color: #2B4040;
+    text-decoration: none;
+    text-align: center;
+    list-style: none;
+    line-height: 1.5;
+}
+
+/* header part including logo, company name and banner*/
+#logo img{
+    float: left;
+    width: 20%;
+    aspect-ratio: 4/3;
+
+}
+#company_name{
+    float: left;
+    text-align: center;
+    padding: 10px 50px;
+    width: 80%;
+}
+
+#company_name h1{
+    
+    font-weight: bold;
+    font-size: 5vw;
+    color: white;
+
+}
+
+#banner img{
+    width: 100%;
+    aspect-ratio: 4/3;
+}
+/*define a custom error page*/
+#error-page{
+    position: absolute;
+    margin: 10% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+    background-color: white;
+}
+#error-page .error-text{
+    max-width: 80%;
+    text-align: center;
+    padding: 20px;
+
+}
+/*design the buttons on error page*/
+#error-page .nav{
+    margin: 25px;
+    list-style-type: none;
+    text-align: center;
+        
+}
+#error-page .nav li{
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+}
+#error-page .nav a{
+
+    color: black;
+    
+}
+#error-page .btns a:hover{
+    background-color: bisque;
+    color: black;
+}
+/*main part consists of two floating sections: menu and content, which width ratio is 2:8.*/
+.column {
+  float: left;
+  padding: 15px;
+  
+}
+
+#menu {
+    padding: 30px;
+    background-color: #3F5A52;
+    position: sticky;
+    top: 0;
+    
+}
+#content{
+    
+    color: #12261F;
+    width: 80%;
+    text-align: left;
+    
+    padding: 2% 5%;
+}
+
+
+#menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/*define how the links to be displayed depending on whether they has been visited, is unvisited, or under hover*/
+/*links in the menu of main*/
+#menu a{
+  padding: 8px;
+  margin-bottom: 8px;
+  text-decoration: none;
+  color: white;
+  line-height: 3;
+}
+#menu a:hover {
+  background-color: #DDE2E3;
+  color: #334744;
+}
+
+/*links in contect of main*/
+#content a{
+    color: black;
+}
+#content a:hover{
+    background-color: #3F5A52;
+    color: white;
+}
+/*provide instructions for buttons under hover*/
+.hovertext{
+    position: relative;
+}
+.hovertext:before{
+    content: attr(data-hover);
+    visibility: hidden;
+    opacity: 0;
+    width: max-content;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    padding: 5px 5px;
+    text-align: left;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 110%;
+}
+.hovertext:hover:before{
+    opacity: 1;
+    visibility: visible;
+}
+
+/*links in footer*/
+#policy li{
+    list-style-type: none;
+}
+#policy a{
+    
+    color: #D1DFDA
+}
+#policy a:hover {
+  background-color: #3F5A52;
+  color: white;
+    
+}
+
+/*define how the products display. Each product element contains the picture and description of the product.*/
+div.gallery{
+  margin: 5px;
+  border: 2px solid #ccc;
+ 
+}
+div.gallery:hover {
+  background-color: #7EA599;
+}
+
+div.gallery img {
+  width: 100%;
+  aspect-ratio: 4/3;
+}
+div.desc {
+  padding: 15px;
+  text-align: left;
+  font-size: 2vw;
+}
+/*There are three products displayed in a row for desktop*/
+.responsive{
+  padding: 0 6px;
+  float: left;
+  width: 33.3333%;
+  
+}
+/* Clear floats after the columns */
+.row::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Responsive layout - makes the columns stack on top of each other instead of next to each other */
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+  .column{
+    width: 100%;
+        }
+
+}
+@media only screen and (max-width:600px) {
+  .column{
+    width: 100%;
+        }
+  .responsive{
+    width: 100%;
+         }
+
+}
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 100%;
+    margin: 6px 0;
+  }
+  .column{
+    width: 100%;
+        }
+} 
+   
+
+        
